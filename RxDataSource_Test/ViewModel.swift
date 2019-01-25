@@ -96,15 +96,15 @@ enum SettingsItem {
 class ViewModel {
     
     private let items = BehaviorRelay<[SettingsSectionModel]>(value: [])
-    
+
     var itemsObservable: Observable<[SettingsSectionModel]> {
         return items.asObservable()
     }
-    
+
     func setup() {
         updateItems()
     }
-    
+
     private func updateItems() {
         let sections: [SettingsSectionModel] = [
             accountSection(),
@@ -113,7 +113,7 @@ class ViewModel {
         ]
         items.accept(sections)
     }
-    
+
     private func accountSection() -> SettingsSectionModel {
         let items: [SettingsItem] = [
             .account,
@@ -123,7 +123,7 @@ class ViewModel {
         ]
         return SettingsSectionModel(model: .account, items: items)
     }
-    
+
     private func commonSection() -> SettingsSectionModel {
         let items: [SettingsItem] = [
             .sounds,
@@ -133,7 +133,7 @@ class ViewModel {
         ]
         return SettingsSectionModel(model: .common, items: items)
     }
-    
+
     private func otherSection() -> SettingsSectionModel {
         let items: [SettingsItem] = [
             .credits,

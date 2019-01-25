@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" id="3dC-4S-by3" customClass="CustomCell" customModule="RxDataSource_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3dC-4S-by3" id="LrS-6d-hAV">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B05-Je-yYi">
+                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="43.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="187.5" id="Oxl-73-suD"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfB-xd-LOh">
+                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="43.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="187.5" id="hTt-Hv-uYP"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="B05-Je-yYi" firstAttribute="leading" secondItem="kfB-xd-LOh" secondAttribute="trailing" id="1Ep-Np-940"/>
+                    <constraint firstItem="kfB-xd-LOh" firstAttribute="leading" secondItem="LrS-6d-hAV" secondAttribute="leading" id="BHq-1a-nGh"/>
+                    <constraint firstAttribute="bottom" secondItem="B05-Je-yYi" secondAttribute="bottom" id="CbW-eF-GHg"/>
+                    <constraint firstAttribute="trailing" secondItem="B05-Je-yYi" secondAttribute="trailing" id="Ebl-S8-FcI"/>
+                    <constraint firstAttribute="bottom" secondItem="kfB-xd-LOh" secondAttribute="bottom" id="FJu-Oc-ra9"/>
+                    <constraint firstAttribute="bottom" secondItem="kfB-xd-LOh" secondAttribute="bottom" id="IGh-bW-RvD"/>
+                    <constraint firstItem="B05-Je-yYi" firstAttribute="leading" secondItem="kfB-xd-LOh" secondAttribute="trailing" id="IIZ-vT-bH6"/>
+                    <constraint firstItem="kfB-xd-LOh" firstAttribute="top" secondItem="LrS-6d-hAV" secondAttribute="top" id="Sve-tY-4BW"/>
+                    <constraint firstItem="B05-Je-yYi" firstAttribute="top" secondItem="LrS-6d-hAV" secondAttribute="top" id="caT-Bk-dYT"/>
+                    <constraint firstItem="B05-Je-yYi" firstAttribute="leading" secondItem="kfB-xd-LOh" secondAttribute="trailing" id="iba-Gf-oLi"/>
+                    <constraint firstItem="kfB-xd-LOh" firstAttribute="top" secondItem="LrS-6d-hAV" secondAttribute="top" id="mCb-u0-ix7"/>
+                    <constraint firstItem="kfB-xd-LOh" firstAttribute="leading" secondItem="LrS-6d-hAV" secondAttribute="leading" id="rsZ-Iv-ha0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="leftButton" destination="kfB-xd-LOh" id="rP7-vv-YVT"/>
+                <outlet property="rightButton" destination="B05-Je-yYi" id="fcd-3i-gzG"/>
+            </connections>
+            <point key="canvasLocation" x="69.599999999999994" y="80.959520239880064"/>
+        </tableViewCell>
+    </objects>
+</document>

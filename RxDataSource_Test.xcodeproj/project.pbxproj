@@ -18,6 +18,8 @@
 		E7B2251F21FAD4750094A1DB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B2251E21FAD4750094A1DB /* RxSwift.framework */; };
 		E7B2252121FAD5630094A1DB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B2252021FAD5630094A1DB /* ViewModel.swift */; };
 		E7B2252321FAD5790094A1DB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7B2252221FAD5790094A1DB /* ViewController.xib */; };
+		E7B2252521FB0B430094A1DB /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7B2252421FB0B430094A1DB /* CustomCell.xib */; };
+		E7B2252721FB0BAB0094A1DB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B2252621FB0BAB0094A1DB /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		E7B2251E21FAD4750094A1DB /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B2252021FAD5630094A1DB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E7B2252221FAD5790094A1DB /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		E7B2252421FB0B430094A1DB /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		E7B2252621FB0BAB0094A1DB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				E7B2250D21FAD3D90094A1DB /* Assets.xcassets */,
 				E7B2250F21FAD3D90094A1DB /* LaunchScreen.storyboard */,
 				E7B2251221FAD3D90094A1DB /* Info.plist */,
+				E7B2252421FB0B430094A1DB /* CustomCell.xib */,
+				E7B2252621FB0BAB0094A1DB /* CustomCell.swift */,
 			);
 			path = RxDataSource_Test;
 			sourceTree = "<group>";
@@ -169,6 +175,7 @@
 			files = (
 				E7B2251121FAD3D90094A1DB /* LaunchScreen.storyboard in Resources */,
 				E7B2252321FAD5790094A1DB /* ViewController.xib in Resources */,
+				E7B2252521FB0B430094A1DB /* CustomCell.xib in Resources */,
 				E7B2250E21FAD3D90094A1DB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +234,7 @@
 			files = (
 				E7B2250921FAD3D80094A1DB /* ViewController.swift in Sources */,
 				E7B2252121FAD5630094A1DB /* ViewModel.swift in Sources */,
+				E7B2252721FB0BAB0094A1DB /* CustomCell.swift in Sources */,
 				E7B2250721FAD3D80094A1DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

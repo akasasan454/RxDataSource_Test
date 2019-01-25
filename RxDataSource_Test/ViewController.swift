@@ -26,32 +26,55 @@ class ViewController: UIViewController {
             case .account, .security, .notification, .contents,
                  .sounds, .dataUsing, .accessibility,
                  .credits, .version, .privacyPolicy:
-                let cell = tableView
-                    .dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-                cell.textLabel?.text = item.title
-                cell.accessoryType = item.accessoryType
+//                let cell = tableView
+//                    .dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//                cell.textLabel?.text = item.title
+//                cell.accessoryType = item.accessoryType
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+                cell.leftButton.rx.tap.asDriver()
+                    .drive(onNext: { [weak self] in
+                        cell.leftButton.backgroundColor = UIColor().randomColor
+                    })
+                    .disposed(by: cell.disposeBag)
+                cell.rightButton.rx.tap.asDriver()
+                    .drive(onNext: { [weak self] in
+                        cell.rightButton.backgroundColor = UIColor().randomColor
+                    })
+                    .disposed(by: cell.disposeBag)
                 return cell
             case .description(let text):
-            let cell = tableView
-                .dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            cell.textLabel?.text = text
-            cell.isUserInteractionEnabled = false
-            return cell
+//                let cell = tableView
+//                    .dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//                cell.textLabel?.text = text
+//                cell.isUserInteractionEnabled = false
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+                cell.leftButton.rx.tap.asDriver()
+                    .drive(onNext: { [weak self] in
+                        cell.leftButton.backgroundColor = UIColor().randomColor
+                    })
+                    .disposed(by: cell.disposeBag)
+                cell.rightButton.rx.tap.asDriver()
+                    .drive(onNext: { [weak self] in
+                        cell.rightButton.backgroundColor = UIColor().randomColor
+                    })
+                    .disposed(by: cell.disposeBag)
+                return cell
             }
         }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewController()
         setupTableView()
         setupViewModel()
     }
-    
+
     private func setupViewController() {
         navigationItem.title = "設定"
     }
-    
+
     private func setupTableView() {
+        tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.contentInset.bottom = 12.0
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
@@ -142,4 +165,11 @@ extension ViewController: UITableViewDelegate {
         return footerView
     }
 }
-
+extension UIColor {
+    public var randomColor: UIColor {
+        let r = CGFloat.random(in: 0 ... 255) / 255.0
+        let g = CGFloat.random(in: 0 ... 255) / 255.0
+        let b = CGFloat.random(in: 0 ... 255) / 255.0
+        return UIColor(red: r, green: g, blue: b, alpha: 1.0)
+    }
+}
